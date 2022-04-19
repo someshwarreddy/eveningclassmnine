@@ -5,7 +5,7 @@
     padding: 0;
 }
 
-/* selector element */
+
 .float {
     color: red;
     float: left;
@@ -13,7 +13,18 @@
 .clear {
     clear: both;
 }
-
+/* selector element */
 .flex {
+/* float: left; */
 display: flex;
+flex-direction: row;
+}
+.flex  div {
+flex-basis: 25%;
+border: 1px solid red;
+
+}
+.three {
+    /* flex-grow: 1; */
+    border: 2px solid blue !important;
 }
