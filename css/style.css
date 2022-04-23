@@ -1,0 +1,46 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+.container {
+    margin: 0 auto;
+    max-width:1140px;
+}
+.header-background {
+    background-color: #212529;
+}
+.logo {
+    color: #ffffff;
+    text-transform: capitalize;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.navbar {
+    display: flex;
+    line-height: 1;
+    padding: 1.3rem 0;
+  
+}
+
+.nav-items {
+    display: flex;
+    margin-left: auto;
+    flex-basis: auto;
+    flex-wrap: wrap;
+}
+.nav-items .list-items {
+    margin-left: 2rem;  
+    list-style: none; 
+}
+.nav-items .list-items a{
+  display: block; 
+  text-decoration: none;
+  text-transform: capitalize;
+  color: #fff;
+}
+
