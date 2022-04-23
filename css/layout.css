@@ -15,21 +15,35 @@
 }
 /* selector element */
 .flex {
-display: flex;
+/* display: flex; */
 /* width: 500px;*/
-height: 200px;
+
 border: 2px solid red;
 /* justify-content: space-evenly; */
 /* flex-wrap: wrap;
 flex-direction: row; */
-justify-content: center;
-align-items: center;
+/* justify-content: center; */
+/* align-items: center; */
 }
-.flex  div {
-
+/* .flex  div {
+    height: 200px;
+    width: 200px;
 border: 1px solid green;
 
-}
+} */
+
+.flex{
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    height:  calc(100% - 80px);
+  }
+  /* center class for add style in div */
+  .center{
+    border: 1px solid green;
+    width:100px;
+    height: 100px;
+  }  
 /* .three {
   flex-shrink: 3; 
 } */
@@ -44,17 +58,22 @@ border: 1px solid green;
     flex-wrap: wrap;
 }
 .flex-container div {
- text-align: center;
+    align-self:center;
+ /* text-align: center; */
     flex-basis: 30%;
     height: 90px;
+    /* padding:5%; */
     flex-grow: 1;
     background-color: rgb(237, 112, 112); 
     border: 1px solid red;
     margin:5px;
+    /* display: grid;
+  place-items:center */
+ 
 }
 
 .flex-item-one {
-    background-color: grey;
+    /* background-color: grey; */
     /* flex-shrink: 1; */
     /* order: 1;  */
 
