@@ -44,3 +44,58 @@
   color: #fff;
 }
 
+.album-jumbotron {
+    /* margin: 3rem auto;*/
+     /* max-width: 40%;  */
+    /* text-align: center;  */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 300px;
+}
+.album-jumbotron div {
+    flex-basis: 40%;
+    text-align: center;
+}
+ .album-jumbotron h1 {
+    font-weight: 300;
+    font-size: 2.5rem;
+    color: rgb(33, 37, 41);
+    margin-bottom: 1rem;
+}
+.album-jumbotron p {
+    font-size: 1.25rem;
+    font-weight: 300;
+    color: #6c757d;
+    margin-bottom: 1rem;
+} 
+.primary-button {
+    background-color: #0d6efd;;
+    padding: .4rem 1rem;
+    color:#ffffff;
+    font-family: cursive;
+    border: 1px solid  #0d6efd;;
+    border-radius: 3px;
+
+}
+
+.thumbnail-section {
+    background-color: rgb(248, 249, 250);
+    padding: 2rem 0;
+}
+
+.thumbnail-section-flex {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.thumbnail-section-flex div {
+    flex: 1 1 30%;
+    height: 200px;
+    margin-right:5px;
+    margin-bottom: 5px;
+    border:1px solid rgba(0,0,0,.125);
+    border-radius: 5px;
+}
+
