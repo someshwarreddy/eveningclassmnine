@@ -101,4 +101,27 @@
     border:1px solid rgba(0,0,0,.125);
     border-radius: 5px;
 }
+/* minimum */
+/* @media (min-width: 576px) { 
+	
+} */
+/* upto */
+@media (max-width: 576px) { 
+	.header-background , .thumbnail-section-flex , .album-jumbotron {
+        padding: 0 20px;
+        background-color: red;
+    }
+    .thumbnail-section  {
+        padding: 2rem;
+    }
+    .thumbnail-section-flex div  {
+        flex: 1 1 100%;
+    }
+}
 
+@media (min-width: 1024px) { 
+	.header-background , .thumbnail-section-flex , .album-jumbotron {
+        padding: 0 20px;
+        background-color: green;
+    }
+}
