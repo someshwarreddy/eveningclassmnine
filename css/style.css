@@ -11,6 +11,9 @@
 }
 .header-background {
     background-color: #212529;
+    position: sticky;
+    width:100%;
+    top:0;
 }
 .logo {
     color: #ffffff;
