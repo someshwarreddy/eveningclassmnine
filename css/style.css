@@ -106,7 +106,7 @@
 	
 } */
 /* upto */
-@media (max-width: 576px) { 
+/* @media (max-width: 576px) { 
 	.header-background , .thumbnail-section-flex , .album-jumbotron {
         padding: 0 20px;
         background-color: red;
@@ -124,4 +124,34 @@
         padding: 0 20px;
         background-color: green;
     }
+} */
+.list-items-one {
+    position: relative;
 }
+.dropdown {
+    position: absolute;
+    display: none;
+    border:2px solid gray;
+    background-color: #212529;
+    /* line-height: ; */
+    /* padding: .5rem; */
+    
+}
+
+.dropdown .dropdown-item {
+    list-style: none;
+    /* line-height: 1; */
+    margin-bottom: .7rem;
+}
+.dropdown .dropdown-item .dropdown-item-link {
+    padding:0 8px;
+}
+
+/* on hover we have to show  use pseduo class*/
+
+.list-items-one:hover .dropdown {
+    display: block;
+}
+
+
+
