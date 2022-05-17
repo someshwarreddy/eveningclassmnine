@@ -1,0 +1,196 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:wght@100&display=swap'); */
+
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css"); 
+
+@font-face {
+    font-family: 'open_sansitalic';
+    src: url('/project/fonts/open/opensans-italic-variablefont_wdthwght-webfont.woff2') format('woff2'),
+         url('/project/fonts/open/opensans-italic-variablefont_wdthwght-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'open_sansregular';
+    src: url('/project/fonts/open/opensans-variablefont_wdthwght-webfont.woff2') format('woff2'),
+         url('/project/fonts/open/opensans-variablefont_wdthwght-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+.container {
+    margin: 0 auto;
+    max-width:1140px;
+}
+.header-background {
+    background-color: #212529;
+    position: sticky;
+    width:100%;
+    top:0;
+}
+.logo {
+    color: #ffffff;
+    text-transform: capitalize;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.navbar {
+    display: flex;
+    line-height: 1;
+    padding: 1.3rem 0;
+  
+}
+
+.nav-items {
+    display: flex;
+    margin-left: auto;
+    flex-basis: auto;
+    flex-wrap: wrap;
+}
+.nav-items .list-items {
+    margin-left: 2rem;  
+    list-style: none; 
+}
+.nav-items .list-items a{
+    font-family: 'Open Sans', sans-serif,'open_sansregular';
+  display: block; 
+  text-decoration: none;
+  text-transform: capitalize;
+  color: #fff;
+  font-weight: 800;
+  font-style: italic;
+
+}
+
+.album-jumbotron {
+    /* margin: 3rem auto;*/
+     /* max-width: 40%;  */
+    /* text-align: center;  */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 300px;
+}
+.album-jumbotron div {
+    flex-basis: 40%;
+    text-align: center;
+}
+ .album-jumbotron h1 {
+    font-weight: 300;
+    font-size: 2.5rem;
+    color: rgb(33, 37, 41);
+    margin-bottom: 1rem;
+}
+.album-jumbotron p {
+    font-size: 1.25rem;
+    font-weight: 300;
+    color: #6c757d;
+    margin-bottom: 1rem;
+} 
+.primary-button {
+    background-color: #0d6efd;;
+    padding: .4rem 1rem;
+    color:#ffffff;
+    font-family: cursive;
+    border: 1px solid  #0d6efd;;
+    border-radius: 3px;
+
+}
+
+.thumbnail-section {
+    background-color: rgb(248, 249, 250);
+    padding: 2rem 0;
+}
+
+.thumbnail-section-flex {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.thumbnail-section-flex div {
+    flex: 1 1 30%;
+    height: 200px;
+    margin-right:5px;
+    margin-bottom: 5px;
+    border:1px solid rgba(0,0,0,.125);
+    border-radius: 5px;
+}
+.content::before {
+    font-family: bootstrap-icons !important;
+    content: "\F62B";
+    color:pink !important;
+}
+/* minimum */
+/* @media (min-width: 576px) { 
+	
+} */
+/* upto */
+/* @media (max-width: 576px) { 
+	.header-background , .thumbnail-section-flex , .album-jumbotron {
+        padding: 0 20px;
+        background-color: red;
+    }
+    .thumbnail-section  {
+        padding: 2rem;
+    }
+    .thumbnail-section-flex div  {
+        flex: 1 1 100%;
+    }
+}
+
+@media (min-width: 1024px) { 
+	.header-background , .thumbnail-section-flex , .album-jumbotron {
+        padding: 0 20px;
+        background-color: green;
+    }
+} */
+.list-items-one {
+    position: relative;
+}
+.dropdown {
+    position: absolute;
+    display: none;
+    border:2px solid gray;
+    background-color: #212529;
+    /* line-height: ; */
+    /* padding: .5rem; */
+    
+}
+
+.dropdown .dropdown-item {
+    list-style: none;
+    /* line-height: 1; */
+    margin-bottom: .7rem;
+}
+.dropdown .dropdown-item .dropdown-item-link {
+    padding:0 8px;
+}
+
+/* on hover we have to show  use pseduo class*/
+
+.list-items-one:hover .dropdown {
+    display: block;
+}
+
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
+}
+
+

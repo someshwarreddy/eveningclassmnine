@@ -1,12 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project</title>
+    <title>webpages with navigation with mulitipul pages</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://fonts.sandbox.google.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
+
 <body>
-    
+   
+    <header class="header-background">
+        <div class="container">
+            <nav class="navbar">
+                <!-- logo -->
+                <a href="index.html" class="logo">
+                    <!-- <img src="" alt="logo"> -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor"
+                        stroke-linecap="round" stroke-linejoin="round" stroke-width="2" aria-hidden="true" class="me-2"
+                        viewBox="0 0 24 24">
+                        <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z">
+                        </path>
+                        <circle cx="12" cy="13" r="4"></circle>
+                    </svg>
+                    <strong> navlogo</strong>
+                </a>
+                <!-- list of nav items -->
+                <ul class="nav-items">
+                    <li class="list-items list-items-one"><a href="aboutus.html">
+                        <i class="bi bi-arrow-up-short"></i>about</a>
+                    <ul class="dropdown">
+                        <li class="dropdown-item"><a href="http://" target="_blank" rel="noopener noreferrer" class="dropdown-item-link">childlink</a></li>
+                        <li class="dropdown-item"><a href="http://" target="_blank" rel="noopener noreferrer" class="dropdown-item-link">childlinktwo</a></li>
+                        <li class="dropdown-item"><a href="http://" target="_blank" rel="noopener noreferrer" class="dropdown-item-link">childlinkthree</a></li>
+                    </ul>
+                    </li>
+                    <li class="list-items"><a href="gallery.html"><i class="bi bi-arrow-up-short"></i>gallary </a></li>
+                    <li class="list-items"><a href="services.html"><i class="bi bi-arrow-up-short"></i>services</a></li>
+                    <li class="list-items"><a href="contactus.html"><i class="bi bi-arrow-up-short"></i>contactus  <i class="fa-regular fa-arrow-down"></i></a></li>
+
+                   
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="album-jumbotron" >
+            <div>
+                <h1 class="menu">
+                     <!-- <svg xmlns="http://www.w3.org/2000/svg" height="48" min-width="48"><path d="M6 36V33H42V36ZM6 25.5V22.5H42V25.5ZM6 15V12H42V15Z"/></svg>-->
+                        Album example
+                    </h1>
+                <!-- <i class="bi bi-upload"></i> -->
+                <!-- <i>&#xF5FC;</i> -->
+                <!-- <i class="bi bi-umbrella-fill"></i> -->
+                <!-- <div class="content"></div> -->
+                <!-- <i class="bi bi-youtube"></i>
+                <img src="project/images/youtube (1).svg" alt="" height="100px" width="100px"> -->
+                <!-- <span class="material-symbols-outlined">
+                    menu
+                    </span> -->
+                <!-- <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-umbrella-fill" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M8 0a.5.5 0 0 1 .5.5v.514C12.625 1.238 16 4.22 16 8c0 0 0 .5-.5.5-.149 0-.352-.145-.352-.145l-.004-.004-.025-.023a3.484 3.484 0 0 0-.555-.394A3.166 3.166 0 0 0 13 7.5c-.638 0-1.178.213-1.564.434a3.484 3.484 0 0 0-.555.394l-.025.023-.003.003s-.204.146-.353.146-.352-.145-.352-.145l-.004-.004-.025-.023a3.484 3.484 0 0 0-.555-.394 3.3 3.3 0 0 0-1.064-.39V13.5H8h.5v.039l-.005.083a2.958 2.958 0 0 1-.298 1.102 2.257 2.257 0 0 1-.763.88C7.06 15.851 6.587 16 6 16s-1.061-.148-1.434-.396a2.255 2.255 0 0 1-.763-.88 2.958 2.958 0 0 1-.302-1.185v-.025l-.001-.009v-.003s0-.002.5-.002h-.5V13a.5.5 0 0 1 1 0v.506l.003.044a1.958 1.958 0 0 0 .195.726c.095.191.23.367.423.495.19.127.466.229.879.229s.689-.102.879-.229c.193-.128.328-.304.424-.495a1.958 1.958 0 0 0 .197-.77V7.544a3.3 3.3 0 0 0-1.064.39 3.482 3.482 0 0 0-.58.417l-.004.004S5.65 8.5 5.5 8.5c-.149 0-.352-.145-.352-.145l-.004-.004a3.482 3.482 0 0 0-.58-.417A3.166 3.166 0 0 0 3 7.5c-.638 0-1.177.213-1.564.434a3.482 3.482 0 0 0-.58.417l-.004.004S.65 8.5.5 8.5C0 8.5 0 8 0 8c0-3.78 3.375-6.762 7.5-6.986V.5A.5.5 0 0 1 8 0z"/>
+                  </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-upload" viewBox="0 0 16 16">
+                    <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/>
+                    <path d="M7.646 1.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 2.707V11.5a.5.5 0 0 1-1 0V2.707L5.354 4.854a.5.5 0 1 1-.708-.708l3-3z"/>
+                  </svg> -->
+                <p>Something short and leading about the collection below—its contents, the creator, etc. Make it short
+                    and sweet, but not too short so folks don’t simply skip over it entirely.</p>
+                <button class="primary-button"><i class="bi bi-arrow-down-short"></i>main call to acton</button>
+                <button><i class="bi bi-arrow-down-short"></i>another action</button>
+            </div>
+        </section>
+        <section class="thumbnail-section"> 
+            <div class="container thumbnail-section-flex">
+           <div>1</div>
+           <div>2</div>
+           <div>3</div>
+           <div>4</div>
+           <div>5</div>
+           <div>6</div>
+           <div>7</div>
+           <div>8</div>
+           <div>9</div>
+        </div>
+          </section>
+    </main>
+    <footer id="aboutus" class="container">
+        <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta autem velit illo praesentium ea et nobis quisquam temporibus natus quod quibusdam quae distinctio quaerat perspiciatis inventore officiis, nostrum alias ipsum!</div>
+        <div>Repudiandae esse ea, ad tenetur architecto laudantium dolor quod natus nam. Quidem soluta fugit minima vel. Ab, amet quo odio odit deserunt iure magnam et quidem molestias libero sunt assumenda.</div>
+        <div>Dignissimos consequuntur perspiciatis eos ea quae nobis maxime quas distinctio illo enim amet odio quos impedit, hic placeat provident quisquam blanditiis aut. Tempora odio tenetur provident a consequatur placeat qui.</div>
+        <div>Autem officiis illum sint consequatur amet est totam fugit voluptates quae! Incidunt, ipsam eligendi. Minus officiis, possimus voluptas, rerum odio obcaecati non unde earum amet eligendi quis eaque doloremque distinctio?</div>
+        <div>Nesciunt atque incidunt doloremque harum itaque dolor? Molestiae culpa, quaerat dolorum repudiandae similique quam eligendi asperiores recusandae? Ut quasi, maiores aliquam, sit perspiciatis tenetur, voluptate eveniet optio ipsa sequi a.</div>
+        <div>Totam voluptatum aperiam, doloremque recusandae culpa provident voluptatibus ipsa, error, dolore at suscipit. Possimus sint architecto vel illo totam doloribus esse cum aut earum magnam, odit labore, sed at. Quisquam.</div>
+        <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, dolorum vitae voluptates consequatur sint culpa minima, voluptatem voluptatibus deserunt nostrum asperiores facilis magni non eveniet neque debitis earum. Delectus, aperiam.</div>
+        <div>Qui doloribus expedita magnam corporis quo autem amet modi, obcaecati asperiores harum saepe, non nemo, deleniti iure omnis voluptates voluptas quia natus repellat in soluta explicabo velit quae nihil? Quae!</div>
+        <div>Ducimus reprehenderit, blanditiis error quibusdam laboriosam dicta dolore itaque libero provident cumque corrupti voluptatum vel nemo, asperiores doloribus, molestiae tenetur eos veniam? Quis corrupti ad iure natus dolorum unde impedit.</div>
+        <div>Quis ducimus nesciunt dolor voluptate modi. Incidunt vel explicabo sed et repudiandae quidem voluptatibus veritatis. Exercitationem deleniti iure, aliquid, unde repellat praesentium, perferendis rem harum non ipsa eveniet maxime molestiae.</div>
+        <div>Nemo consequatur eligendi, dicta ipsa beatae accusantium quo in eveniet illo aliquid nobis excepturi quaerat molestias earum eos quisquam distinctio dignissimos autem? Ipsum accusantium, sequi quo fugit asperiores voluptatum ducimus.</div>
+        <div>Sint quaerat blanditiis omnis, provident laboriosam explicabo suscipit nisi corporis dicta! Quisquam qui necessitatibus saepe perferendis nobis explicabo nam nisi perspiciatis at. Id magni blanditiis enim non doloremque dicta veritatis.</div>
+    </footer>
 </body>
+
 </html>
