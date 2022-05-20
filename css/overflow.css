@@ -1,0 +1,22 @@
+* {
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 600px
+}
+.overflow {
+    width:400px;
+    height: 50px;
+    border: 2px solid red;
+    /* line-height: 3; */
+    /* overflow: hidden; */
+    /* overflow-y: hidden; */
+    word-break:break-all;
+    overflow-y: scroll;
+
+}
