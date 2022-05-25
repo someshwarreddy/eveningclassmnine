@@ -1,0 +1,51 @@
+div {
+    /* display: inline;
+    display: inline-block;
+    border: 2px solid greenyellow;
+    margin-top: 100px; 
+    margin-bottom: -200px;
+    margin-left: 100px;
+height: 200px;
+width:200px */
+}
+
+a, span , em , strong {
+    /* display: block; */
+    /* margin-top: 100px;
+    margin-bottom: -200px;
+    height: 200px;
+    width:200px; */
+}
+
+.border-div {
+    width:100px;
+    height: 100px;
+    border-top: 1px solid greenyellow;
+    border-bottom: 1px solid blueviolet;
+    border-left: 1px solid green;
+    border-right: 1px solid red;
+    border-radius: 50%;
+    /* border-top-left-radius: 5%;
+    border-top-right-radius: 10%;
+    border-bottom-left-radius: 20%;
+    border-bottom-right-radius: 30%; */
+    /* text-align: center; */
+    /* padding: .2rem; */
+    position: relative;
+    /* border-top: 10px;
+    border-top-color: ;
+    border-color: black;
+    border-style: dotted; */
+    background-color: grey;
+    margin: 0 auto;
+}
+
+.avatarImage {
+    position: absolute;
+    left:0;
+   /* max-width:10vw; */
+    width: 100px;
+    /* max-height: 20vh; */
+    height: 100px;
+    border-radius: 50%;
+}
