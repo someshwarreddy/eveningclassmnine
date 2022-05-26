@@ -1,0 +1,9 @@
+.container {
+    max-width: 150%;
+    min-height: 50%;
+    border: 2px solid red;
+    word-break: break-all;
+    line-break: loose;
+    /* line-height: 20; */
+    /* overflow-y: auto; */
+}
