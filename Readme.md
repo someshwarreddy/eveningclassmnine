@@ -1,6 +1,6 @@
 /* interview q nnd a  */
 
-/* 1 box-model
+1 box-model
 2 inline vs block 
 3 inline vs block vs inlineblock
 4 html elements  scmantic
@@ -22,12 +22,11 @@ unversial selector
 element selector 
 class selector
 id selector
-*/
-/* 
+ 
 specificity
 background
 linearGradient
 pseudoelements
 pseudoclasses
 
-attribute selector */
+attribute selector 
