@@ -1,9 +1,9 @@
 /* interview q nnd a  */
 
-1 box-model
-2 inline vs block 
-3 inline vs block vs inlineblock
-4 html elements  scmantic
+#1 box-model
+#2 inline vs block 
+#3 inline vs block vs inlineblock
+#4 html elements  scmantic
 5 boxsizing
 6 position
 7 flexbox
