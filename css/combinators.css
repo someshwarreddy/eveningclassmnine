@@ -1,0 +1,79 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    width: 200px;
+    margin: 0 auto
+}
+
+/* desendent combinator */
+/* ul li {
+    border: 2px solid red;
+    list-style: none;
+    margin-bottom: 1rem;
+} */
+
+/* child combinator denoted by > symbol */
+/* ul>li {
+    border: 2px solid red;
+    list-style: none;
+    margin-bottom: 1rem;
+} */
+/* adjcent selector or combinator */
+/* ul+li {
+    border: 2px solid red;
+    list-style: none;
+    margin-bottom: 1rem;
+} */
+/* General sibling combinator */
+/* ul~li {
+    border: 2px solid red;
+    list-style: none;
+    margin-bottom: 1rem;
+} */
+li {
+    margin-top: 1rem;
+    list-style: none;
+    text-align: center;
+}
+li[class='o'] {
+    border:3px solid red
+}
+/* class end with $*/
+li[class$='o'] {
+    border:4px solid rgb(0, 28, 128);
+}
+/* class start with ^ */
+li[class^='o'] {
+    border:3px solid green;
+}
+
+li[class~='n'] {
+    border:3px solid rgb(204, 29, 41);
+}
+/* pseduoclass */
+li:hover {
+    color:aquamarine;
+    font-size: 2rem;
+}
+li:hover:first-child {
+    /* content: 'kjfgkjsgdksjghd'; */
+    color:rgb(132, 63, 227);
+    font-size: 3rem; 
+}
+/* pseduo elements */
+li:hover::before {
+    content: "*";
+    position: relative;
+    top:10px;
+}
+li::after{
+    content: "*";
+}
+
+li::first-letter {
+    color:rgb(79, 20, 160);
+    font-size: 3rem;  
+}

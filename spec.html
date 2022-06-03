@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>specficity</title>
+
+    <!-- internal -->
+    <style>
+      
+      #d-one{
+            width: 200px;
+            height: 200px;
+            margin: 0 auto;
+            border: 10px solid rgb(0, 255, 21);  
+        }
+        .dc-one{
+            width: 200px;
+            height: 200px;
+            margin: 0 auto;
+            border: 10px solid rgb(38, 34, 34);  
+        }
+        div {
+            width: 200px;
+            height: 200px;
+            margin: 0 auto;
+            border: 10px solid rgb(0, 30, 255);
+        }
+div[class*='d'] {
+    width: 200px;
+            height: 200px;
+            margin: 0 auto;
+            border: 10px solid rgb(255, 68, 0);
+}
+#d-one::before{
+    content: 'jldfhdhj';
+    width: 200px;
+            height: 200px;
+            margin: 0 auto;
+            border: 10px solid rgb(14, 5, 2);
+}
+
+div::before{
+    content: 'jldfhdhj';
+    width: 200px;
+            height: 200px;
+            margin: 0 auto;
+            border: 10px solid rgb(255, 68, 0);
+}
+      
+/* * {
+    width: 200px;
+            height: 200px;
+            margin: 0 auto;
+            border: 10px solid rgb(255, 0, 225);
+} */
+      
+    </style>
+<!-- external -->
+<!-- <link rel="stylesheet" href="css/specificity.css"> -->
+
+</head>
+
+<body>
+    <!-- css style writing -->
+    <!-- inline -->
+    <!-- internal -->
+    <!-- external -->
+    <!-- 1 inline -->
+    <!-- <div id="d-one" class="dc-one"  style="width:200px; height:200px; margin:0 auto; border: 1px solid red;">divone</div> -->
+    <div  id="d-one" class="dc-one" >divone</div>
+</body>
+
+</html>
