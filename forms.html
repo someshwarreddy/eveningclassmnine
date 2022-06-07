@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+    <link rel="stylesheet" href="css/forms.css">
+</head>
+<body>
+    <!-- handle the data -->
+    <form class="user-form" action="url" method="get" >
+       
+      <h1> Create Account</h1>
+        <ul class="user-list">
+            <li> <label for="user-name">Name</label>
+                <input type="text" name="name" id="user-name" value="somesh"></li>
+                <li>
+                <label for="mobile">mobilenumber</label>
+                <select name="cars">
+                  <option value="+91">ind</option>
+                  <option value="+54">hfh</option>
+                  <option value="+889">Opel</option>
+                  <option value="+6564">Audi</option>
+                </select>
+                <input type="tel" name="" id="mobile">
+                </li>
+                <li>
+                    <label for="user-email">email</label>
+                    <input type="email" name="" id="user-email" disabled>
+                </li>
+            <li>
+                <label for="user-password">password</label>
+                <input type="password" name="" id="user-password" required minlength="4" maxlength="9">
+            </li>
+            
+        </ul>
+        <button type="submit">continue</button>
+
+    </form>
+</body>
+</html>

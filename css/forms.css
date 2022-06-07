@@ -1,0 +1,36 @@
+.user-form {
+    width:350px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    border:1px solid red;;
+    flex-wrap: nowrap;
+    padding: 1rem;
+ 
+}
+.user-form .user-list label {
+ display: inline-block;
+ width:100%;
+}
+
+.user-form .user-list {
+    /* flex:0 0 80%; */
+    /* width:100%; */
+}
+
+.user-list, .user-list li {
+    padding: 0;
+    margin:0;
+    list-style: none;
+}
+input{
+outline:0
+}
+
+input:focus{
+    border-color: red;
+    outline: 0;
+    }
+
+
+
