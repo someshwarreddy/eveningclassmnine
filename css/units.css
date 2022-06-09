@@ -1,0 +1,53 @@
+* {
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    font-size: 8px;
+}
+ul {
+    margin-left:50px;
+}
+/* unit is em 1em = 16px it is not static */
+.emes li {
+    /* visibility: hidden; */
+    display: none;
+    font-size: 2em;
+}
+
+.rems li {
+    display: none;
+    font-size: 1rem;
+}
+
+/* .rems li {
+    font-size: 2vw;
+} */
+
+.z-one {
+   width: 300px;
+   height: 400px;
+   margin: 0 auto;
+   border:2px solid red;
+   background-color: aqua;
+  
+}
+
+.z-child, .z-chid-two{
+     /* float: left; */
+    width: 100px;
+    height: 150px;
+  
+    border:2px solid yellow;
+z-index: -3;
+ }
+ .z-chid-two{
+    background-color: blue;
+    /* z-index: 3; */
+ }
+ .z-child {
+    background-color: rgb(51, 255, 0);
+    transform: translateY(10rem)
+   
+ }
