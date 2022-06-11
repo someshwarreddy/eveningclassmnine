@@ -1,3 +1,12 @@
+/* css varibles $ scss sass less preprocessors */
+:root {
+    --purple: #8A4D76;
+--pink: #FA7C91;
+--brown: #757763;
+--beige-light: #D0D1CD;
+--beige-lighter: #EFF0EB
+}
+
 * {
     margin:0;
     padding: 0;
@@ -5,27 +14,31 @@
 }
 html {
     font-size: 8px;
+    background-color: var(--purple);
 }
+
+
 ul {
     margin-left:50px;
 }
 /* unit is em 1em = 16px it is not static */
 .emes li {
     /* visibility: hidden; */
-    display: none;
+    /* display: none; */
     font-size: 2em;
+    color: var(--beige-light);
 }
 
 .rems li {
-    display: none;
+    /* display: none; */
     font-size: 1rem;
 }
 
-/* .rems li {
+.rems li {
     font-size: 2vw;
-} */
+}
 
-.z-one {
+/* .z-one {
     position: absolute;
    width: 300px;
    height: 400px;
@@ -35,40 +48,40 @@ ul {
    text-align: center;
    font-size: 16px;
    z-index: 1;
-}
+} */
 
-.z-child, .z-chid-two{
+/* .z-child, .z-chid-two{
  
     width: 100px;
     height: 150px;
   
     border:2px solid yellow;
 
- }
- .z-chid-two{
+ } */
+ /* .z-chid-two{
     background-color: blue;
     position: absolute;
     z-index: 5;
     font-size: 16px;
- }
- .z-child {
+ } */
+ /* .z-child {
     background-color: rgb(51, 255, 0);
     transform: translateY(10rem);
     position: absolute;
     z-index: 10;
     font-size: 30px;
- }
+ } */
 
- .z-two {
+ /* .z-two {
      float: left;
-    /* position: absolute; */
+    position: absolute;
     width: 900px;
     height: 200px;
-    /* margin: 0 auto; */
-    /* text-align: center; */
+    margin: 0 auto;
+    text-align: center;
    font-size: 16px;
     border:2px solid rgb(64, 0, 255);
     background-color: rgb(209, 86, 9);
-    /* left:100px;
-    z-index: 2; */
- }
+    left:100px;
+    z-index: 2;
+ } */
