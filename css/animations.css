@@ -1,0 +1,44 @@
+.transition {
+    display: block;
+   font-size: 8px;
+   /* margin:0 auto; */
+   width: 100px;
+   height: 100px;
+   color: red;
+   background: pink;
+   border:1px solid red;
+   /* animation-name: slide ;
+   animation-duration: 1s;
+   animation-delay: 0;
+   animation-iteration-count: infinite;
+   animation-timing-function: linear;
+   animation-fill-mode: forwards;
+   animation-play-state: running; */
+   transition: font-size 10s ease-in; 
+
+   animation: 10s ease-in-out 0s infinite alternate slide;
+  
+/* transition-delay: 4ms;
+transition-duration:8ms;
+transition-property:font-size;
+transition-timing-function:ease; */
+}
+/* color background propertyies  are not applied */
+
+.transition:hover {
+    font-size: 30px ;
+   width:100px;
+}
+
+@keyframes slide {
+    /* from  0% start */
+    /* to 100% end */
+
+from,
+ 0%,30% {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(90vw);
+    }
+}
