@@ -1,0 +1,21 @@
+table {
+    margin:0 auto;
+}
+
+.two tbody tr:nth-child(even) {
+    background-color: pink;
+}
+.two tbody tr:nth-child(odd) {
+    background-color: green;
+}
+
+.one tr:nth-child(even) {
+    background-color: pink;
+}
+.one tr:nth-child(odd) {
+    background-color: green;
+}
+.one td:nth-child(2n+1) {
+    background-color: blue;
+}
+

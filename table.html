@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>table</title>
+    <link rel="stylesheet" href="css/table.css">
+</head>
+
+<body>
+    <table border="1" class="one">
+        <tr>
+            <th>&nbsp</th>
+            <th>coloumn2</th>
+            <th>coloumn3</th>
+            <th>coloumn4</th>
+        </tr>
+        <tr>
+            <th>name</th>
+            <td>c2</td>
+            <td>c3</td>
+            <td>c4</td>
+        </tr>
+        <tr>
+
+            <th>gender</th>
+            <td>c2</td>
+            <td>c3</td>
+            <td>c4</td>
+        </tr>
+        <tr>
+
+            <th>year</th>
+            <td>c2</td>
+            <td>c3</td>
+            <td>c4</td>
+        </tr>
+        <tr>
+
+            <th>year</th>
+            <td>c2</td>
+            <td>c3</td>
+            <td>c4</td>
+        </tr>
+    </table>
+
+    <table border="1">
+        <tr>
+            <th colspan="2">somename</th>
+        </tr>
+        <tr>
+            <th colspan="2">some name second</th>
+        </tr>
+        <tr>
+            <th rowspan="2">name three</th>
+            <td>related to three name</td>
+        </tr>
+        <tr>
+            <td>related to three name</td>
+        </tr>
+        <tr>
+            <th colspan="2">four</th>
+        </tr>
+    </table>
+    <table border="1" class="two">
+        <colgroup>
+        <col> targets column 1
+        <!-- <col style="background-color: red;">
+        <col style="background-color: green;"> -->
+        </colgroup>
+        <thead>
+           <tr > <th scope="col"> &nbsp</th>
+            <th scope="col">name </th>
+            <th scope="col">id</th>
+        </tr>
+        </thead>
+        <tfoot>
+            <tr>
+                <th scope="row" colspan="3">total</th>
+            </tr>
+        </tfoot>
+        <tbody>
+            <tr>
+            <th scope="row">number</th>
+            <td>somesh</td>
+            <td>2</td>
+        </tr>
+        <tr>
+            <th scope="row">number</th>
+            <td>somesh</td>
+            <td>2</td>
+        </tr>
+        <tr>
+            <th scope="row">number</th>
+            <td>somesh</td>
+            <td>2</td>
+        </tr>
+        </tbody>
+      
+    </table>
+
+</body>
+
+</html>
