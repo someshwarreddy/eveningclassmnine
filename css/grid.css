@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    /* font-size: 10px; */
+
+}
+.grid-parent {
+    max-width:800px;
+    margin: 0 auto;
+    border: 1px solid rgb(213, 32, 32);
+    display: grid;
+    /* grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; */
+    /* grid-template-columns: repeat(1 , 1fr); */
+    /* grid-template-rows: 100px 100px 100px; */
+    grid-auto-rows: auto minmax(100px , auto);
+    gap: 8px;
+    word-break: break-all;
+    padding: 8px;
+    /* place-items: center; */
+    /* justify-items: center;
+    align-items: center; */
+}
+
+.grid-child {
+  background-color: aquamarine;  
+  /* justify-self: center;
+  align-self: center; */
+  display: grid;
+  /* grid-template-columns: repeat(3 , 1fr); */
+  /* grid-auto-rows: auto minmax(100px , auto); */
+  gap:.5em; /*16px*/
+}
+
+.grid-chid-one {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    padding-bottom: 10px;
+}
+
+.grid-child > div {
+    background-color: blueviolet;
+}
+
+.grid-area-parent {
+    /* max-width:800px; */
+    display: grid;
+
+    border: 1px solid rgb(213, 32, 32);
+ 
+    /* grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; */
+    /* grid-template-columns: repeat(1 , 1fr); */
+    /* grid-template-rows: 100px 100px 100px; */
+    /* grid-auto-rows: auto minmax(100px , auto); */
+    /* gap: 8px;
+    word-break: break-all;
+    padding: 8px; */
+    width: 100%;
+    height: 250px;
+    /* place-items: center; */
+    /* justify-items: center;
+    align-items: center; */
+  
+    grid-template-areas: "head head nav"
+                          "head head nav"
+                          "main main nav"
+                          "foot foot nav"
+
+                    
+}
+
+/* .grid-area-parent   div {
+    background-color: blueviolet;
+} */
+
+.first {
+    grid-area: head;
+    background-color: red;
+}
+.second {
+    grid-area: nav; 
+    background-color: green
+}
+
+.third {
+    grid-area: main;  
+    background-color: blue;
+}
+.four {
+    grid-area: foot;  
+    background-color: pink
+}
+
+#page {
+    display: grid;
+    width: 100%;
+    height: 250px;
+    grid-template-areas: "head head"
+                         "nav  main"
+                         "foot  foot";
+    /* grid-template-rows: 50px 1fr 30px;
+    grid-template-columns: 150px 1fr; */
+  }
+  
+  #page > header {
+    grid-area: head;
+    background-color: #8ca0ff;
+  }
+  
+  #page > nav {
+    grid-area: nav;
+    background-color: #ffa08c;
+  }
+  
+  #page > main {
+    grid-area: main;
+    background-color: #ffff64;
+  }
+  
+  #page > footer {
+    grid-area: foot;
+    background-color: #8cffa0;
+  }
+  
+
+ 
