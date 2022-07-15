@@ -256,4 +256,46 @@ function parr(a, sai='my name sai', gk='hi kumar'){ // this a is parameter
   
   console.log(summm(1, 2, 3, 4));
   // expected output: 10
-  
+
+  //() group operator
+document.createElement  
+document.body.appendChild(buttons)= buttons
+document.body.appendChild
+
+
+// iife 
+// hi()
+// function hi(){
+//     console.log('hi')
+// }
+// (function (){
+//   console.log('iife') 
+// })()
+
+// let aaa=a=> console.log('áa')
+// aaa()
+let a= 2;
+let b=4;
+
+((a , b)=> {
+    
+    console.log(a+b);
+})(a,b)
+
+const bb= (a , b)=> {
+    
+    console.log(a+b);
+}
+bb(a , b)
+
+// high order functions
+
+function hf(argh) {
+    console.log(argh)
+    return argh(a,b)
+}
+
+hf(bb)
+
+
+
