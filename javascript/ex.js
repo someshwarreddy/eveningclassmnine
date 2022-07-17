@@ -298,4 +298,91 @@ function hf(argh) {
 hf(bb)
 
 
+// funtions types 
 
+// named function or defination
+//function expression or unnamed or annonmyous
+// iife
+// arrow function
+// functions as first class citizens (or) functions
+// pure functions
+// higherorder functions
+// function curring
+// restparmerts
+
+var arr = (...a) => console.log(...a);
+arr(10,10,10,10); // argument
+//spread opreator
+
+var ass= 'jsghgkgjskghsdgk'
+var dd=[...ass]
+console.log(...dd);
+(function(){
+  alert('iife with anonmyous')}); // terment
+  
+  (()=> {alert('hi')}); // terment
+
+   ;(function (){})()
+  ;(function (){})()
+
+  for(var a =0; a<=2; a++){
+    const buttons = document.createElement('button');
+    buttons.innerText= 'button'+ a;
+    document.body.appendChild(buttons);
+
+     buttons.onclick = (function (aa){
+    return () => alert('hi am'+aa)
+    })(a)
+  
+  }
+
+  function callback(){
+    alert('hi i am call back passed as argumnet to high order function')  
+  }
+  
+  
+  function highor(highorderparam){
+      highorderparam();
+  }
+  function pf(a){
+    alert(a)
+}
+
+pf('lkgsdgjlsdg')
+
+var pf = (a)=>alert(a*a);
+pf(2)
+  highor(callback) //
+
+  function pf(a){
+    alert(a)
+}
+
+pf('lkgsdgjlsdg')
+c=100
+var pf = (a,b)=>alert(a*b);
+function bb(pff){
+    a=100
+    b=100
+    pff(a,b)
+}
+
+bb(pf);
+
+cc(55)(5)(6)
+
+
+var one = cc(2);
+var two =one(3)
+two(7)
+function cc(one){
+    return function(two){
+       return function(three){
+           console.log(one+two+three);
+       }
+    }
+}
+bb()
+var bb = function (){}
+console.log(a)
+var a = 20
