@@ -69,6 +69,10 @@ function roots (discriminant){
         // condition for real and equal roots
         else if (discriminant == 0) {
             root1 = root2 = -b / (2 * a);
+             root3=4;
+            console.log(typeof(root1))
+ console.log(isNaN(root1)) // true here value= Nan
+ console.log(isNaN(root3)) // true here value= 4
             // result
             console.log(`The roots of 2 quadratic equation are ${root1} and ${root2}`);
         }

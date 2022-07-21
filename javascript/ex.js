@@ -309,7 +309,13 @@ hf(bb)
 // higherorder functions
 // function curring
 // restparmerts
-
+// function composition
+// what is functional programming
+// Pure functions
+// Function composition
+// Avoid shared state
+// Avoid mutating state
+// Avoid side effects
 var arr = (...a) => console.log(...a);
 arr(10,10,10,10); // argument
 //spread opreator
@@ -386,3 +392,71 @@ bb()
 var bb = function (){}
 console.log(a)
 var a = 20
+
+function square(n){
+  return n * n
+  
+};
+function add2(n){
+  return n + n;
+}
+square= (n)=> n*n;
+add2 = (n)=> n+n;
+add2AndSquare = (n) => square(add2(n));
+console.log(add2AndSquare(2));
+
+// compose = (...fns) => (initialVal) => fns.reduceRight((val, fn) => fn(val), initialVal);
+compose = (f1, f2) => value => f2( f1(value) );
+const add2        = (n) => n + 2;
+const times2      = (n) => n * 2;
+const times2add2  = compose(add2, times2);
+const add6        = compose(add2, add2, add2);
+
+console.log(times2add2(2) ,add6(2));  // 6
+
+// Pure functions
+// Function composition
+// Avoid shared state
+// Avoid mutating state
+// Avoid side effects
+let root1, root2;
+
+// take input from the user
+let a = parseInt(prompt("Enter the first number: "));
+let b = parseInt(prompt("Enter the second number: "));
+let c = parseInt(prompt("Enter the thirdggggg number: "));
+
+// calculate discriminant
+let discriminant = b * b - 4 * a * c;
+console.log(isNaN(discriminant))
+
+// condition for real and different roots
+if (discriminant > 0) {
+    root1 = (-b + Math.sqrt(discriminant)) / (2 * a);
+    root2 = (-b - Math.sqrt(discriminant)) / (2 * a);
+
+    // result
+    console.log(`The roots of 1 quadratic equation are ${root1} and ${root2}`);
+}
+
+// condition for real and equal roots
+else if (discriminant == 0) {
+console.log(typeof(a));
+    root1 = -b / (2 * a);
+    root2 = -b / (2 * a);
+    root3 = (-0 / (2 * 0));
+console.log(typeof(NaN));
+    // result
+    console.log(root3)
+    console.log(`The roots of 2 quadratic equation are ${root1} and ${root2}`);
+}
+
+// if roots are not real
+else {
+    let realPart = (-b / (2 * a)).toFixed(2);
+    let imagPart = (Math.sqrt(-discriminant) / (2 * a)).toFixed(2);
+    // result
+    console.log(
+      `The roots of 3 quadratic equation are ${realPart} + ${imagPart}i and ${realPart} - ${imagPart}i`
+    );
+  }
