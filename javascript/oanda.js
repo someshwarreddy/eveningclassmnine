@@ -48,8 +48,9 @@ let personone =  {
     persons.name=value; 
     persons.age= age; 
 
-    persons.type = function () {
+    persons.type = function () { // this is act as method 
      console.log(this.name);
+     return this.name;
     }
     console.log(persons, this.persons)
 
@@ -57,7 +58,24 @@ let personone =  {
 
  }
 
- person('somesh', 36).type();
+ let male =person('somesh', 36).type();
+
+ let female = person('laxmi', 36).type(); //upto here literal type
+
+ console.log(male,female) //upto here literal type
+// object constructor
+ function personcono(name, age){
+   this.name= name;
+   this.age = age;
+   this.type= ()=> this.name;
+ }
+let malec = new personcono('somesh', 3455);
+let femalee = new personcono('somesh', 3455);
+console.log(malec);
+
+console.log(malec.type())
+//end of constructor
+
 
  console.log(Object.keys(personone).length)
  console.log(Object.keys(personone))
@@ -69,9 +87,12 @@ let personone =  {
 
 //  console.log(ret)
 
-let input = prompt('enter key'); //input = age 
+// let input = prompt('enter key'); //input = age 
 
 // console.log(personone.input); //o/p
-console.log(personone[input]); // o/p
+// console.log(personone[input]); // o/p
+
+// [{},{},{},{}] {[],[],[],}
+ 
 
 
