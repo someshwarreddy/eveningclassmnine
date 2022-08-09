@@ -68,9 +68,25 @@ arr = [1,2,3,4,5]
 let mapp = arr.map((pa)=>pa*2);
 console.log(mapp);
 
+
+
 arr.unshift(20000000000000000000000);
-arr.shift(20000000000000000000000); //
+arr.unshift(20000000000000000000000);
 console.log(arr)
+
+let words = [1,2,3,4,5]
+
+console.log(words.filter((value)=> value>3))
+
+const modifiedWords = words.filter((word, index, arr) => {
+  arr[index+1] +=' extra'
+  return word.length < 6
+})
+
+console.log(modifiedWords)
+
+
+
 
 
 
