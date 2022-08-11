@@ -36,6 +36,21 @@ console.log(originalobj,copyobj)// deep copy
 // spreadopreator
 copyobj= {...originalobj}
 
+
+// spreadopreator
+copyobj= {...originalobj}
+
+copyvalue={ ...copyobj,
+    location:{
+        ...copyobj.location,
+        adress:'banglore'
+    }
+}
+
+
+  
+console.log(originalobj,copyvalue)// deep copy
+
  copyvalue.name = 'someshwar';
   copyvalue.location.adress = 'banglore';
   
