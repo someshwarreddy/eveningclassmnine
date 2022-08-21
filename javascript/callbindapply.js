@@ -30,3 +30,14 @@ let arr = [1,2,3,4]
 let [one, two , three, four]=arr;
 
 console.log(one, two , three, four)
+
+let objec = {
+    name:'somesh',
+    age:35
+}
+let {name:nd, age , area='somesh'}=objec;
+
+console.log(area)
+console.log(age)
+console.log(name)
+console.log(nd)
