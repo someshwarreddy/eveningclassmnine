@@ -116,3 +116,49 @@ let f2 = fetch('https://jsonplaceholder.typicode.com/posts/11o');
 Promise.all([promisefetchdata,f2])
 .then((Response)=> console.log(Response))
 .catch((error)=>console.log(error))
+
+
+// function promise() {
+//     return new Promise((resolve, reject) => {
+//       if (Math.random() > 'e') {
+//         resolve('resovle is used for succsess callback');
+//       } else {
+//         reject('reject is used for fail callback');
+//       }
+//     });
+//   }
+  
+//   promise()
+//     .then((mail) => {
+//       console.log(mail);
+//     })
+//     .catch((err) => {
+//       console.error(err);
+//     })
+//     .finally(() => {
+//       console.log('Experiment completed');
+//     });
+
+//     let pm = new Promise((resolve, reject) => {
+//          resolve(fetch('https://jsonplaceholder.typicode.com/posts/1yg'));
+//          resolve(fetch('https://jsonplaceholder.typicode.com/postsjjj'));
+//          reject('failedapi')
+//     })
+//   pm.then((m)=> console.log(m))
+//   pm.then((m)=>console.log(m))
+//   .catch((e)=>console.log(e))
+
+
+async function fetchapi() {
+    try{
+        let fp=  await fetch('https://jsonplaceholder.typicode.com/posts/19999999') ;
+        if(!fp.ok){
+        throw new Error(`${fp.status}`);}
+
+        let pr = await response.json();
+    }
+    catch(error){
+        console.log(error)
+    }
+  }
+  fetchapi()

@@ -1,3 +1,5 @@
+// const { reject } = require("async");
+
 let fetchedpromise = fetch('https://jsonplaceholder.typicode.com/posts/1');
 let fetchedpromisetwo = fetch('https://jsonplaceholder.typicode.com/posts');
 console.log(fetchedpromise)
@@ -17,7 +19,7 @@ console.log(fetchedpromise)
 
 // fetchedpromise.then((Response) => {
 //     if(!Response.ok) {
-//         throw new Error(`HTTP error: ${Response.status}`) // throws error if api fails
+//      reject (   throw new Error(`HTTP error: ${Response.status}`) )// throws error if api fails
 //     }
 
 //     return Response.json()
@@ -28,13 +30,61 @@ console.log(fetchedpromise)
 //      })
 //      .catch((err)=>console.log(err))
 
+function sync(){
+    for(let data of fetchedpromise){
+        console.log(data);
+    }
+}
+
 Promise.all([fetchedpromise,fetchedpromisetwo])
 .then((response)=> {
-    console.log(response) 
+    for (let data of response){
+    console.log(data.json())} 
 })
 
 // Promise.any()
 
 // aync await 
 
+// let pr = new Promise((resolve, reject)=> {
+   
+//     if(true){
+//         resolve(fetch('https://jsonplaceholder.typicode.com/posts/1'))
 
+//     }
+
+//     reject('i am failed to fetch api ')
+//     // resolve(' iam success full');
+//     // resolve(' iam success full two');
+//     // resolve(' iam success full three');
+//     // // reject('i am fialed block')
+// })
+
+// pr.then((messeage)=> console.log(messeage))
+// .catch((err)=>console.log(err))
+// .finally(()=>console.log('finshed',))
+
+// async await u write the code as synchronous way
+
+async function getdata() {
+    let fdata =  await fetch('https://jsonplaceholder.typicode.com/posts/1')
+    // console.log(fdata);
+}
+
+getdata()
+
+async function fetchapi() {
+    try{
+        let fp =  await fetch('https://jsonplaceholder.typicode.com/posts/1') ;
+        console.log(fp)
+        if(!fp.ok){
+        throw new Error(`${fp.status}`);}
+
+         let pr = await fp.json();
+         console.log(pr)
+    }
+    catch(error){
+        console.log(error)
+    }
+  }
+  fetchapi()
