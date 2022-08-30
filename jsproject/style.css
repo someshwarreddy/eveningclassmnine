@@ -1,0 +1,58 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1120px;
+}
+
+.nav-bar,
+.nav-menu {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.nav-menu {
+    margin-left: auto;
+
+}
+
+.nav-menu .nav-list {
+    list-style: none;
+    margin: 10px;
+}
+
+.nav-menu .nav-list a {
+    text-decoration: none;
+    display: block;
+    padding: 5px;
+    font-size: 18px;
+    text-transform: capitalize;
+    /* applying text gradient */
+    background: -webkit-linear-gradient(#0c0c0c, #050505); 
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.card {
+    display: flex;
+    flex-wrap: wrap;
+    border:1px solid #050505;
+    /* flex-direction: ; */
+}
+
+.card-content{
+    flex: 0 0 32%;
+     /* width: 200px;
+    height: 200px;  */
+    height: 200px;
+    margin-left:5px;
+    border:1px solid red;
+
+}
+.adress {
+    display: flex;
+    flex-direction: column;
+}
