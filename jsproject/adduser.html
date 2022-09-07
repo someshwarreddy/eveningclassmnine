@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Userdata</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <header class="header">
+            <nav class="nav-bar">
+                <a href="#" target="_blank" rel="noopener noreferrer"><img src="" alt="logo">users</a>
+                <ul class="nav-menu">
+                    <li class="nav-list"><a href="index.html" id="userdata">productlist</a></li>
+                    <li class="nav-list"><a href="ud.html" rel="noopener noreferrer">productdetails</a></li>
+                    <li class="nav-list"><a href="adduser.html" rel="noopener noreferrer">addproduct</a></li>
+                </ul>
+            </nav>
+        </header>
+        <section class="product-section">
+            <form id="productForm">
+                <h1>ADD Product</h1>
+              
+                <div id="title">
+                  <label for="title">title:</label>
+                  <input type="text" id="title" name="product_title">
+                </div>
+              
+                <div id="price">
+                  <label for="price">price:</label>
+                  <input type="number" id="price" name="product_price">
+                </div>
+              
+                <div id="message">
+                  <label for="msg">Discription:</label>
+                  <textarea id="msg" name="product_discription"></textarea>
+                </div>
+                
+                <div id="category">
+                    <label for="category">category:</label>
+                    <input type="text" id="category" name="product_category">
+                  </div>
+                  <div id="categoryy">
+                    <label for="categoryy">categoryhh:</label>
+                    <input type="text" id="categoryy" name="product_categoryy">
+                  </div>
+                  <div id="picture">
+                    <label for="picture">image:</label>
+                    <input type="file" name="picture" accept="image/*"  name="product_image">
+                    <!-- <input type="text" name="picture"   name="product_image"> -->
+                  </div>
+                <div class="button">
+                  <button type="submit">addproduct</button>
+                </div>
+              </form>
+               
+        </section>
+    </div>
+    <script src="adduser.js"></script>
+</body>
+
+</html>
