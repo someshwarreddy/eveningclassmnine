@@ -12,6 +12,7 @@ window.onload = function () {
 async function userdetails() {
     try {
         let id = localStorage.getItem('id')
+        debugger;
         url = 'https://fakestoreapi.com/products/'
         let userdetails = await fetch(url + id)
         if (!userdetails.ok) {

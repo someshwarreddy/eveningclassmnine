@@ -37,10 +37,10 @@ function allusers(data) {
 
     let keys = Object.keys(data[0]);
 
-    let keyd = document.createElement('div');
+    // let keyd = document.createElement('div');
 
-    container.appendChild(keyd)
-    keyd.innerHTML = keys;
+    // container.appendChild(keyd)
+    // keyd.innerHTML = keys;
     container.appendChild(carddivpar);
     carddivpar.classList.add('card'); // targeting to the html adding classname to particular element
     data.forEach((element) => {
@@ -79,5 +79,6 @@ function selectitem(selecteditem, id) {
     selecteditem.addEventListener('click', function () {
         localStorage.setItem("id", id); //webstorage
         window.location.href = 'http://127.0.0.1:5500/jsproject/ud.html' // linking   to  selected productdetails page
+        debugger
     })
 }

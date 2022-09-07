@@ -38,8 +38,9 @@ let form = document.querySelector('form');
 
 form.addEventListener('submit',  async function (e) {
     e.preventDefault();
-    let formdata = new FormData(form);
-    // console.log(JSON.stringify(...formdata))
+    let formdata = new FormData(form); // object constuctor
+    console.log(...formdata)
+    console.log(formdata)
 
     try {
         let response = await fetch('https://fakestoreapi.com/products', {
@@ -56,3 +57,4 @@ form.addEventListener('submit',  async function (e) {
 
 })
 
+// id,title,price,description,category,image,rating
