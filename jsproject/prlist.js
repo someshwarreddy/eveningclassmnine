@@ -18,16 +18,34 @@ async function data() {
         allusers(data);
     }
     catch (error) {
-        let err = document.createElement('p');
-        let container = document.querySelector('.container') // targetting from the css selector
-        let alertblock = document.createElement('div');
-        container.appendChild(alertblock);
-        alertblock.classList.add('alert-block')
-        alertblock.appendChild(err)
-        err.textContent = " api failed" + error.message;
-        err.classList.add('alert-meesage');
-    
+        errorhandler(error);
     }
+}
+
+function errorhandler(error) {
+    let err = document.createElement('p');
+    let errspan = document.createElement('span');
+    let container = document.querySelector('.container') // targetting from the css selector
+    
+    let alertblock = document.createElement('div');
+    container.appendChild(alertblock);
+    alertblock.classList.add('alert-block')
+    alertblock.appendChild(err)
+    
+    err.textContent = " api failed" + error.message;
+    // err.classList.add('alert-meesage');
+    
+    alertblock.appendChild(errspan)
+    errspan.innerHTML = '&times;'
+    errspan.classList.add('closebtn');
+    closealert(errspan,alertblock)
+}
+
+function closealert(errspan, alertblock) {
+    errspan.addEventListener('click', ()=>{
+        alertblock.style.opacity = "0";
+        setTimeout(function(){ alertblock.style.display = "none"; }, 600);
+    }) 
 }
 
 function allusers(data) {
@@ -79,6 +97,5 @@ function selectitem(selecteditem, id) {
     selecteditem.addEventListener('click', function () {
         localStorage.setItem("id", id); //webstorage
         window.location.href = 'http://127.0.0.1:5500/jsproject/ud.html' // linking   to  selected productdetails page
-        debugger
     })
 }
