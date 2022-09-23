@@ -15,6 +15,7 @@ async function data() {
             throw new Error(`${getdata.status}`);
         }
         let data = await getdata.json();
+        serchitem(data)
         allusers(data);
     }
     catch (error) {
@@ -98,4 +99,22 @@ function selectitem(selecteditem, id) {
         localStorage.setItem("id", id); //webstorage
         window.location.href = 'http://127.0.0.1:5500/jsproject/ud.html' // linking   to  selected productdetails page
     })
+}
+
+function serchitem (data){
+
+    let button = document.querySelector("#search")
+    button.addEventListener("click", () => {
+        let serachterm = document.getElementById('searchterm').value;
+        data.forEach((element)=> {
+            if(element.id === +serachterm){
+                console.log(element)
+                return element;
+            }
+            else {
+                // alert('error')
+            }
+        })
+    })
+
 }

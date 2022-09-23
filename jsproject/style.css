@@ -3,6 +3,9 @@
     padding: 0;
     box-sizing: border-box;
 }
+body {
+    background-color: #c5d5cb;
+}
 
 .container {
     margin: 0 auto;
@@ -42,16 +45,19 @@
     flex-wrap: wrap;
     /* border: 1px solid #050505; */
     flex-direction: row;
+    padding-left: 5px;
+   
 
 }
 
 .card-content {
-    flex: 0 0 32%;
+    flex: 1 1 auto;
     min-height: 200px;
     margin: 10px 0 0 5px;
     /* border: 1px solid red; */
-
+    background-color: #9fa8a3;
     padding: .75rem;
+    border-radius: 5px;
 
 }
 
@@ -134,8 +140,9 @@
     background: #cecece;
 }
 .custom-inner {
-  
-    background-color: grey;
+    display: flex;
+    justify-content: space-around;
+    background-color:#e3e0cf;
 }
 
 .custom-item-width {
@@ -157,3 +164,22 @@
 .d-block {
     display: block !important;
 }
+
+
+
+input:invalid {
+    border: 2px dashed red;
+  }
+  
+  input:valid {
+    border: 2px solid black;
+  }
+
+  input:invalid:required {
+    background-image: linear-gradient(to right, pink, lightgreen);
+  }
+
+  input:focus:invalid {
+    box-shadow: none;
+  }
+  
