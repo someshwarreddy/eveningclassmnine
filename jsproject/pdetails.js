@@ -127,6 +127,6 @@ delitem.addEventListener('click', async ()=>{
 function edititem(ebutton,id){
     ebutton.addEventListener('click', function(){
         let id = localStorage.getItem('id')
-        window.location.href = 'http://127.0.0.1:5500/jsproject/adduser.html' // linking   to  selected productdetails page
+        window.location.href = 'http://127.0.0.1:5500/jsproject/adduser.html' // reditedting to adduser page
     })
 }

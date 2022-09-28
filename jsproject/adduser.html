@@ -2,57 +2,58 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Userdata</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Userdata</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="search.css">
 </head>
 
 <body>
-    <div class="container">
-        <header class="header">
-            <nav class="nav-bar">
-                <a href="#" target="_blank" rel="noopener noreferrer"><img src="" alt="logo">users</a>
-                <ul class="nav-menu">
-                    <li class="nav-list"><a href="index.html" id="userdata">productlist</a></li>
-                    <li class="nav-list"><a href="ud.html" rel="noopener noreferrer">productdetails</a></li>
-                    <li class="nav-list"><a href="adduser.html" rel="noopener noreferrer">addproduct</a></li>
-                    <li class="nav-list"><a href="other.html" rel="noopener noreferrer">other</a></li>
-                </ul>
-            </nav>
-        </header>
-        <section class="product-section">
-            <form id="productForm">
-                <h1>ADD Product</h1>
-             
-                <div id="title">
-                  <label for="title">title:</label>
-                  <input type="text" id="title" name="product_title" required pattern="/a-z/">
-                </div>
-              
-                <div id="price">
-                  <label for="price">price:</label>
-                  <input type="number" id="price" name="product_price" required>
-                </div>
-              
-                <div id="message">
-                  <label for="msg">Discription:</label>
-                  <textarea id="msg" name="product_discription"></textarea required>
+  <div class="container">
+    <header class="header">
+      <nav class="nav-bar">
+        <a href="#" target="_blank" rel="noopener noreferrer"><img src="" alt="logo">users</a>
+        <ul class="nav-menu">
+          <li class="nav-list"><a href="index.html" id="userdata">productlist</a></li>
+          <li class="nav-list"><a href="ud.html" rel="noopener noreferrer">productdetails</a></li>
+          <li class="nav-list"><a href="adduser.html" rel="noopener noreferrer">addproduct</a></li>
+          <li class="nav-list"><a href="other.html" rel="noopener noreferrer">other</a></li>
+        </ul>
+      </nav>
+    </header>
+    <section class="product-section">
+      <form id="productForm">
+        <h1>ADD Product</h1>
+
+        <div id="title">
+          <label for="title">title:</label>
+          <input type="text" id="title" name="product_title" class="form-input"  placeholder="enter text" required pattern="[a-zA-Z]+">
+        </div>
+
+        <div id="price">
+          <label for="price">price:</label>
+          <input type="number" id="price" name="product_price" class="form-input" required>
+        </div>
+
+        <div id="message">
+          <label for="msg">Discription:</label>
+          <textarea id="msg" name="product_discription"></textarea required>
                 </div>
                 
                 <div id="category">
                     <label for="category">category:</label>
-                    <input type="text" id="category" name="product_category" required>
+                    <input type="text" id="category" class= "form-input"  name="product_category" required>
                   </div>
                   <div id="categoryy">
                     <label for="categoryy">categoryhh:</label>
-                    <input type="text" id="categoryy" name="product_categoryy" required>
+                    <input type="text" id="categoryy" class= "form-input" name="product_categoryy" required>
                   </div>
                   <div id="picture">
                     <label for="picture">image:</label>
-                    <!-- <input type="file" id="picture" accept="image/*"  name="product_image"> -->
-                    <input type="text" id="picture"   name="product_image" required>
+                    <!-- <input type="file" id="picture" class= "form-input" accept="image/*"  name="product_image"> -->
+                    <input type="text" id="picture" class= "form-input"  name="product_image" required>
                   </div>
                 <div class="button">
                   <button type="submit">addproduct</button>

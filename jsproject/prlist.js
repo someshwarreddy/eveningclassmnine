@@ -55,7 +55,7 @@ function allusers(data) {
     let container = document.querySelector('.container') // targetting from the css selector
 
     let keys = Object.keys(data[0]);
-
+    carddivpar.innerHTML= ''
     // let keyd = document.createElement('div');
 
     // container.appendChild(keyd)
@@ -108,8 +108,9 @@ function serchitem (data){
         let serachterm = document.getElementById('searchterm').value;
         data.forEach((element)=> {
             if(element.id === +serachterm){
-                console.log(element)
-                return element;
+                let ele = [];
+                ele.push(element)
+             allusers(ele)
             }
             else {
                 // alert('error')

@@ -56,11 +56,12 @@ function allproducts(data) {
     card.innerHTML = '';
 
     data.forEach((product) => {
-        const { title, image, id, price } = product
+        // deconstucted
+        const { title, image, id, price } = product;
 
         const cardcontent = document.createElement('div')
         cardcontent.classList.add('card-content')
-
+// inner html it takes as string 
         cardcontent.innerHTML = `<div class="responsivediv"> 
             <img src="${image}" class="responsiveimg"alt="${title}"></div>
             <div >
@@ -127,3 +128,7 @@ function searchproducts(data) {
 
 
 }
+
+// const API_URL = 'https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=3fd2be6f0c70a2a598f084ddfb75487c&page=1'
+// const IMG_PATH = 'https://image.tmdb.org/t/p/w1280'
+// const SEARCH_API = 'https://api.themoviedb.org/3/search/movie?api_key=3fd2be6f0c70a2a598f084ddfb75487c&query="'
