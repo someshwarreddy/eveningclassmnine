@@ -57,3 +57,22 @@ person.prototype.newname= 'sai new' //
 // changing 
 let person3 = new person();
 console.log(person3.newname);
+
+
+const obje = {
+  
+  getname: function(){
+    console.log(this.name); //// own properties here name
+  }
+}
+
+function personn (name){
+  this.name=name;
+}
+
+Object.assign(personn.prototype, obje);
+
+let personone = new personn('somesh'); 
+
+personone.getname()
+
