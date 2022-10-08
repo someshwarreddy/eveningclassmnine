@@ -40,3 +40,15 @@ class student extends person {
 
 let studentt = new student('student', 20);
 studentt.myname()
+
+class p { 
+    #name
+    constructor(name){
+    this.#name = name 
+    }
+    gname(){ return this.#name > 1}
+   }
+
+let pr = new p(2)
+undefined
+console.log(pr.gname())

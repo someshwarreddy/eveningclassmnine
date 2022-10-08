@@ -6,11 +6,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>products</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="search.css">
+<style>
+    #productForm{
+        flex-direction: column;
+    }
+    .form-input::placeholder{
+        padding-left: .4rem;
+        font-family:sans-serif;
+    }
+
+    #send {
+        border: none;
+        background-color: transparent;
+        font-size: 1.5rem;
+        text-transform: capitalize;
+        color: rgb(80, 77, 77);
+        font-weight: bold;
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+    }
+</style>
 </head>
 
 <body>
@@ -27,18 +43,27 @@
                 </ul>
             </nav>
         </header>
-        <div class="row">
-        <form class="column column-offset-50  column-25">
-            <fieldset>
-                <label for="nameField">Name</label>
-                <input type="text" placeholder="name or email" id="nameField">
-                <label for="nameField">password</label>
-                <input type="password" placeholder="enter password" id="password">
+        <section class="product-section">
+            <form id="productForm">
+                <h1>Signup</h1>
+          
+                <div id="title">
+                    <label for="title">Email:</label>
+                    <input type="text" id="email" name="product_title" class="form-input" placeholder="enter email">
+                </div>
+                <div id="show"></div>
+                <div id="passwordd">
+                    <label for="title">Password:</label>
+                    <input type="password" id="password" name="product_password" class="form-input" placeholder="enter password">
+                </div>
+                <div id="showpassword"></div>
+                <div class="button">
+                    <button type="submit" id="send">signup</button>
+                </div>
+          
+            </form>
 
-                <input class="button-primary" type="submit" value="Send" id="send">
-            </fieldset>
-        </form>
-        </div>
+        </section>
 
     </div>
 
