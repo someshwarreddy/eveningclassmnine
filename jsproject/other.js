@@ -131,4 +131,42 @@ function searchproducts(data) {
 
 // const API_URL = 'https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=3fd2be6f0c70a2a598f084ddfb75487c&page=1'
 // const IMG_PATH = 'https://image.tmdb.org/t/p/w1280'
-// const SEARCH_API = 'https://api.themoviedb.org/3/search/movie?api_key=3fd2be6f0c70a2a598f084ddfb75487c&query="'
+// const SEARCH_API = 'https://api.themoviedb.org/3/search/movie?api_key=3fd2be6f0c70a2a598f084ddfb75487c&query="'let send = document.getElementById('send');
+let ckeckemail = function validateEmail(email) {
+    let res = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    return res.test(email);
+  }
+ let ckeckpassword=function validatepassword(password){
+  let regex = /^(?!.*\s)(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*[~`!@#$%^&*()--+={}\[\]|\\:;"'<>,.?/_₹]).{8,16}$/;
+  return regex.test(password);
+ }
+  send.addEventListener('click',  function validate(e) {
+    e.preventDefault();
+ 
+    // let result = document.querySelector('#result')
+    let email = document.getElementById('email').value; // hkjk@gmail.com
+    let emaill = document.getElementById('email');
+    let show = document.getElementById('show');
+     let password = document.getElementById('password').value
+    let passwordd = document.getElementById('password');
+    let showpassword = document.getElementById('showpassword');
+  
+    // result.textContent = '';
+    if(validateEmail(email)) {
+      show.textContent=  email + " is valid";
+      emaill.style.border = '2px solid green';
+    } else {
+      show.textContent=  email + " is not valid";
+      emaill.style.border = '2px solid red';
+    
+    }
+    if(validatepassword(password)) {
+      showpassword.textContent=  password + " is valid password";
+      passwordd.style.border = '2px solid green'
+    } else {
+      showpassword.textContent =  password + " is not valid password";
+      passwordd.style.border = '2px solid red';
+    
+    }
+    return false;
+  })

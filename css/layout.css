@@ -58,7 +58,7 @@ border: 1px solid green;
     flex-wrap: wrap;
 }
 .flex-container div {
-    align-self:center;
+    /* align-self:center; */
  /* text-align: center; */
     flex-basis: 30%;
     height: 90px;
@@ -72,10 +72,13 @@ border: 1px solid green;
  
 }
 
-.flex-item-one {
-    /* background-color: grey; */
+.flex-container div:nth-child(3) {
+    /* background-color: black; */
     /* flex-shrink: 1; */
     /* order: 1;  */
+
+    /* align-self: flex-end; */
+    justify-self: center
 
 }
 .flex-item-two {

@@ -8,25 +8,26 @@
     <title>products</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="search.css">
-<style>
-    #productForm{
-        flex-direction: column;
-    }
-    .form-input::placeholder{
-        padding-left: .4rem;
-        font-family:sans-serif;
-    }
+    <style>
+        #productForm {
+            flex-direction: column;
+        }
 
-    #send {
-        border: none;
-        background-color: transparent;
-        font-size: 1.5rem;
-        text-transform: capitalize;
-        color: rgb(80, 77, 77);
-        font-weight: bold;
-        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
-    }
-</style>
+        .form-input::placeholder {
+            padding-left: .4rem;
+            font-family: sans-serif;
+        }
+
+        #send {
+            border: none;
+            background-color: transparent;
+            font-size: 1.5rem;
+            text-transform: capitalize;
+            color: rgb(80, 77, 77);
+            font-weight: bold;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+        }
+    </style>
 </head>
 
 <body>
@@ -46,21 +47,25 @@
         <section class="product-section">
             <form id="productForm">
                 <h1>Signup</h1>
-          
-                <div id="title">
+
+                <div id="title" >
                     <label for="title">Email:</label>
-                    <input type="text" id="email" name="product_title" class="form-input" placeholder="enter email">
-                </div>
-                <div id="show"></div>
-                <div id="passwordd">
-                    <label for="title">Password:</label>
-                    <input type="password" id="password" name="product_password" class="form-input" placeholder="enter password">
-                </div>
-                <div id="showpassword"></div>
-                <div class="button">
-                    <button type="submit" id="send">signup</button>
+                    <input type="text" id="email" name="email" class="form-input" placeholder="enter email"
+                        autocomplete="off">
+                        <small></small>
                 </div>
           
+                <div id="passwordd" >
+                    <label for="title">Password:</label>
+                    <input type="password" id="password" name="password" class="form-input" placeholder="enter password"
+                        autocomplete="off">
+                        <small></small>
+                </div>
+               
+                <div class="button">
+                    <input type="submit" id="send" value="Signup"></input>
+                </div>
+
             </form>
 
         </section>

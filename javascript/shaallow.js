@@ -26,7 +26,7 @@ copyobj=JSON.parse(JSON.stringify(originalobj))
  copyobj.name = 'someshwar';
 console.log(originalobj,copyobj)// deep copy
 
-// in above scenario copy does not copy obj method
+// in above scenario copy // jsonparse and json stringfy does not copy obj method
 
 copyobj= Object.assign({},originalobj)
  copyobj.name = 'someshwar';

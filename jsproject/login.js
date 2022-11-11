@@ -1,39 +1,123 @@
-let send = document.getElementById('send');
-function validateEmail(email) {
-    let res = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-    return res.test(email);
+
+const emailEl = document.querySelector('#email');
+const passwordEl = document.querySelector('#password');
+const form = document.querySelector('#productForm');
+// let show = document.getElementById('show');
+
+const checkEmail = () => {
+  let valid = false;
+  const email = emailEl.value.trim();
+  if (!isRequired(email)) {
+    showError(emailEl, 'Email is not valid.')
+
+  } else if (!isEmailValid(email)) {
+    showError(emailEl, 'email mustnot empty')
+  } else {
+    showSuccess(emailEl)
+    valid = true;
   }
- function validatepassword(password){
+  return valid;
+}
+
+const checkPassword = () => {
+
+  let valid = false;
+
+  const password = passwordEl.value.trim();
+
+  if (!isRequired(password)) {
+    showError(passwordEl, 'password cannot empty')
+  } else if (!isPasswordvalid(password)) {
+    showError(passwordEl, ' passwaord must conatain special uppercase')
+  } else {
+    showSuccess(passwordEl)
+    valid = true;
+  }
+
+  return valid;
+};
+
+let isEmailValid = function validateEmail(email) {
+  let res = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+  return res.test(email);
+}
+
+let isPasswordvalid = function validatepassword(password) {
   let regex = /^(?!.*\s)(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*[~`!@#$%^&*()--+={}\[\]|\\:;"'<>,.?/_₹]).{8,16}$/;
   return regex.test(password);
- }
-  send.addEventListener('click',  function validate(e) {
-    e.preventDefault();
- 
-    // let result = document.querySelector('#result')
-    let email = document.getElementById('email').value; // hkjk@gmail.com
-    let emaill = document.getElementById('email');
-    let show = document.getElementById('show');
-     let password = document.getElementById('password').value
-    let passwordd = document.getElementById('password');
-    let showpassword = document.getElementById('showpassword');
-  
-    // result.textContent = '';
-    if(validateEmail(email)) {
-      show.textContent=  email + " is valid";
-      emaill.style.border = '2px solid green';
-    } else {
-      show.textContent=  email + " is not valid";
-      emaill.style.border = '2px solid red';
-    
+}
+const isRequired = value => value === '' ? false : true;
+
+let showError = (input, message) => {
+  // get the form-field element
+  const formField = input
+  // add the error class
+  formField.classList.remove('success');
+  formField.classList.add('error');
+  const formFieldd = input.parentElement;
+  // show the error message
+  const error = formFieldd.querySelector('small');
+  error.textContent = message;
+}
+
+let showSuccess = (input) => {
+  // get the form-field element
+  const formField = input
+  const formFieldd = input.parentElement;
+  // remove the error class
+  formField.classList.remove('error');
+  formField.classList.add('success');
+
+
+  // hide the error message
+  const error = formFieldd.querySelector('small');
+  error.textContent = '';
+}
+form.addEventListener('submit', function validate(e) {
+  e.preventDefault();
+  // validate forms
+  alert(';jj')
+  let isEmailValid = checkEmail()
+  let isPasswordValid = checkPassword()
+
+
+  let isFormValid = isEmailValid && isPasswordValid
+
+
+  // submit to the server if the form is valid
+  if (isFormValid) {
+
+  }
+
+})
+
+
+
+const debounce = (fn, delay = 500) => {
+  let timeoutId;
+  console.log(fn)
+  return (...args) => {
+    console.log(args)
+    // cancel the previous timer
+    if (timeoutId) {
+      clearTimeout(timeoutId);
     }
-    if(validatepassword(password)) {
-      showpassword.textContent=  password + " is valid password";
-      passwordd.style.border = '2px solid green'
-    } else {
-      showpassword.textContent =  password + " is not valid password";
-      passwordd.style.border = '2px solid red';
-    
-    }
-    return false;
-  })
+    // setup a new timer
+    timeoutId = setTimeout(() => {
+      fn.apply(null, args)
+    }, delay);
+  };
+};
+
+form.addEventListener('input', debounce(function (e) {
+  switch (e.target.id) {
+
+    case 'email':
+      checkEmail();
+      break;
+    case 'password':
+      checkPassword();
+      break;
+
+  }
+}));

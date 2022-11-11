@@ -15,7 +15,7 @@ async function data() {
             throw new Error(`${getdata.status}`);
         }
         let data = await getdata.json();
-        serchitem(data)
+        // serchitem(data)
         allusers(data);
     }
     catch (error) {
@@ -101,21 +101,21 @@ function selectitem(selecteditem, id) {
     })
 }
 
-function serchitem (data){
+// function serchitem (data){
 
-    let button = document.querySelector("#search")
-    button.addEventListener("click", () => {
-        let serachterm = document.getElementById('searchterm').value;
-        data.forEach((element)=> {
-            if(element.id === +serachterm){
-                let ele = [];
-                ele.push(element)
-             allusers(ele)
-            }
-            else {
-                // alert('error')
-            }
-        })
-    })
+//     let button = document.querySelector("#search")
+//     button.addEventListener("click", () => {
+//         let serachterm = document.getElementById('searchterm').value;
+//         data.forEach((element)=> {
+//             if(element.id === +serachterm){
+//                 let ele = [];
+//                 ele.push(element)
+//              allusers(ele)
+//             }
+//             else {
+//                 // alert('error')
+//             }
+//         })
+//     })
 
-}
+// }
